@@ -1,0 +1,39 @@
+Name: Adam Can
+Project Title: MyPokedex
+Project Stack: JAVA
+GitHub Repo Link: https://github.com/adamcanbuildit/ProjectAndAlgos
+
+Project Description: An application where users have a pokedex. They can add, remove, and change the name of the pokemon in their pokedex.
+			Users can also search for new pokemon to add to their pokedex. And they can view other user's pokedex and like them.
+
+New Programming Concept(s) I'm Planning to Learn: Bootstrap, APIs(PokeAPI)
+
+Week 1 Features (to show at Review during Week 2)
+- Sign up for a group (https://docs.google.com/spreadsheets/d/1x9PRE-xviP4N-jjPWlFNkNycPIzgeYyQKphdLFeaxGs/edit#gid=0)
+- Schedule a Review during Week 2 (https://calendly.com/zpieper/solo-project-sprint)
+- Create GitHub repo for project
+- Create a .gitignore file for my project for my GitHub repo (enter in React, Python, or Java at https://www.toptal.com/developers/gitignore)
+- Finish this completed txt file and create project wireframe using Balsamiq (https://balsamiq.com/wireframes/) [Drawings and other wireframe programs also accepted!]
+- Email Zack this completed txt file, and project wireframe for approval
+- Submit completed wireframe on platform (https://login.codingdojo.com/m/97/6237/44911)
+- Complete Arrays To Do 1 & Arrays To Do 2 assignments
+- FOR PROJECT
+	- Register/Login
+	- Pokemon Search
+
+
+Week 2 Features (to show at first office hour/lecture of Week 3)
+- Schedule my time for my presentation (https://docs.google.com/spreadsheets/d/1x9PRE-xviP4N-jjPWlFNkNycPIzgeYyQKphdLFeaxGs/edit#gid=414986054)
+- Begin to talk with group about project ideas and what skills I bring to the table
+- Complete Singly Linked Lists Fronts & Display assignments
+- ***Finish CSS work (could be Bootstrap or another framework too instead of CSS)***
+- FOR PROJECT
+	- Building a pokemon roster
+	- Editing your pokemon
+	- Liking Pokedexes
+	- Finish formatting
+
+
+Product Backlog (If I have more time after completing my MVP, I'll start to work on...)
+- Allow users to request "battles" as opposed to "likes"
+- Get images for types, instead of text
