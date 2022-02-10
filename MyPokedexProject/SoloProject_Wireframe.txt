@@ -1,7 +1,7 @@
 Name: Adam Can
 Project Title: MyPokedex
 Project Stack: JAVA
-GitHub Repo Link: https://github.com/adamcanbuildit/ProjectAndAlgos
+GitHub Repo Link: https://github.com/adamcanbuildit/ProjectAndAlgos/tree/main/MyPokedexProject
 
 Project Description: An application where users have a pokedex. They can add, remove, and change the name of the pokemon in their pokedex.
 			Users can also search for new pokemon to add to their pokedex. And they can view other user's pokedex and like them.
