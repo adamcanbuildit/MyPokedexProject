@@ -47,18 +47,26 @@ getFrontValue() {
 
 // DISPLAY
     display() {
+        if (this.head==null) {
+            return null;
+        }
         // Set iterator at the head node
         let runner = this.head;
+        let output = new String();
         // Print the val of each node as runner goes through
         while (runner!==null) {
-            console.log(runner.val);
+            // Add the node's value to our output string
+            output+=runner.val;
+            // Add a comma to separate values if this is not the last node
+            if (runner.next!=null) {output+=" , "}
             // Move runner to next node
             runner = runner.next;
         }
+        return output;
     }
 }
 
 
 let test = new SLL();
 test = test.addFront(2).addFront(4).addFront(5).addFront(1);
-test.display();
+console.log(test.display());
