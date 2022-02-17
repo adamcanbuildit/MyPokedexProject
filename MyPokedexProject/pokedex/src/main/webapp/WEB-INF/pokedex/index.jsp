@@ -15,12 +15,15 @@
 			<input type="submit" class="btn btn-primary float-end" value="Logout">
 		</form>
 		<a href="/findpokemon">Find a New Pokemon</a>
+		<a href="/show/mypokedex/${user.id}">MyPokedex</a>
 		<h1>MyPokedex</h1>
 	</div>
 	
 	<div id="body">
 		<c:forEach var="pokemon" items="${pokemonlist}">
 			<img src="${pokemon.pictureUrl}" alt="" />
+			<p><c:out value="${pokemon.name}" /></p>
+			<p><c:out value="${pokemon.species}" /></p>
 		</c:forEach>
 	</div>
 </body>

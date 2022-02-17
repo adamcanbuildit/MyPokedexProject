@@ -11,11 +11,9 @@ import com.adam.pokedex.repositories.*;
 @Service
 public class UserService {
 	private final UserRepository userRepo;
-	private final PokemonRepository pokeRepo;
 	
-	public UserService(UserRepository userRepo,PokemonRepository pokeRepo) {
+	public UserService(UserRepository userRepo) {
         this.userRepo = userRepo;
-        this.pokeRepo = pokeRepo;
     }
 	
 	// Register user and hash their password

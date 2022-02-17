@@ -16,7 +16,7 @@
 			<input type="submit" class="btn btn-primary float-end" value="Logout">
 		</form>
 		<a href="/findpokemon">Find a New Pokemon</a>
-		<a href="/show/mypokedex/0">MyPokedex</a>
+		<a href="/show/mypokedex/${user.id}">MyPokedex</a>
 		<h1>Add Pokemon</h1>
 	</div>
 

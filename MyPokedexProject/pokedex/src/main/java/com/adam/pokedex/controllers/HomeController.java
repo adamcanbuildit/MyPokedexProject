@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.adam.pokedex.models.*;
 import com.adam.pokedex.services.*;
-import com.mashape.unirest.http.exceptions.UnirestException;
 
 @Controller
 public class HomeController {
@@ -84,7 +83,7 @@ public class HomeController {
 		if (currentUserId == null) {
 			return "redirect:/";
 		} else {
-			//model.addAttribute("user", userService.findUserById(currentUserId));
+			model.addAttribute("user", userService.findUserById(currentUserId));
 			pokeService.addSearchPokemonInfoToModelFromSession(model, session);
 			return "pokedex/findPokemon.jsp";
 		}
@@ -120,7 +119,7 @@ public class HomeController {
 		if (currentUserId == null) {
 			return "redirect:/";
 		} else {
-			//model.addAttribute("user", userService.findUserById(currentUserId));
+			model.addAttribute("user", userService.findUserById(currentUserId));
 			pokeService.addSearchPokemonInfoToModelFromSession(model, session);
 			return "pokedex/addPokemon.jsp";
 		}
@@ -136,6 +135,7 @@ public class HomeController {
 			return "redirect:/";
 		} else if (name.isBlank()) {
 			model.addAttribute("error","You haven't given me a name for your pokemon!");
+			model.addAttribute("user", userService.findUserById(currentUserId));
 			return "pokedex/addPokemon.jsp";
 		} else {
 			pokeService.createPokemonWithName(name, session);
@@ -171,6 +171,7 @@ public class HomeController {
 			}
 			// get user's pokemon list to be displayed
 			model.addAttribute("pokemonlist", userService.findUserById(longId).getPokemonRoster());
+			model.addAttribute("user", userService.findUserById(currentUserId));
 			return "pokedex/index.jsp";
 		}
 	}
