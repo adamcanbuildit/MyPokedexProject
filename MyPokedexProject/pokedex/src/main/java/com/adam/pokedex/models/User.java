@@ -114,6 +114,12 @@ public class User {
 	public void setLikers(List<User> likers) {
 		this.likers = likers;
 	}
+	public List<User> getLikes() {
+		return likes;
+	}
+	public void setLikes(List<User> likes) {
+		this.likes = likes;
+	}
 	public Date getCreatedAt() {
 		return createdAt;
 	}

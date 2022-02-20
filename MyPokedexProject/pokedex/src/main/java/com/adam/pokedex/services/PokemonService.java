@@ -72,12 +72,22 @@ public class PokemonService {
 		pokeRepo.save(pokemon);
 	}
 
-	// update Pokemon with new name
-	public void updatePokemonName(Pokemon pokemon,String name) {
+	// Update Pokemon with new name
+	public void renamePokemon(Pokemon pokemon,String name) {
 		pokemon.setName(name);
 		pokeRepo.save(pokemon);
 	}
 	
+	// Release pokemon
+	public void releasePokemon(Long pokeId) {
+		pokeRepo.deleteById(pokeId);
+	}
+	
+	// Get Pokemon by ID
+	public Pokemon getPokemonById(Long id) {
+		return pokeRepo.findById(id).get();
+	}
+
 //  --  Function to grab a pokemon from the web and grab the info we need
 //  --  Then store that info into the session as activePokemon
 	public void findPokemonFromWebAndAddToSession(String query, Model model, HttpSession session) {

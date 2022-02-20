@@ -1,5 +1,6 @@
 package com.adam.pokedex.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -23,7 +24,12 @@ public class UserService {
         return userRepo.save(user);
     }
     
- // Find user by email
+    // Return all users
+    public List<User> getAllUsers() {
+    	return userRepo.findAll();
+    }
+    
+    // Find user by email
     public User findByEmail(String email) {
         return userRepo.findByEmail(email);
     }
@@ -54,5 +60,18 @@ public class UserService {
                 return false;
             }
         }
+    }
+
+    // Like another user's pokedex
+    public void likeAPokedexById(Long currentUserId,Long pokedexOwnerId) {
+    	User currentUser = findUserById(currentUserId);
+    	User pokedexOwner = findUserById(pokedexOwnerId);
+    	if (currentUser.getLikes().contains(pokedexOwner)) {
+    		currentUser.getLikes().remove(pokedexOwner);
+    		userRepo.save(currentUser);
+    	} else {
+    		currentUser.getLikes().add(pokedexOwner);
+    		userRepo.save(currentUser);
+    	}
     }
 }
